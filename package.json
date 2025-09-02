@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "prisma generate && prisma migrate deploy",
     "dev": "next dev --turbopack",
-    "build": "prisma generate && prisma migrate dev && next build --turbopack",
+    "build": "next build --turbopack",
     "start": "next start"
   },
   "dependencies": {
