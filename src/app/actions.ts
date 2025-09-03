@@ -1,11 +1,13 @@
 'use server'
 
+import { redirect } from "next/navigation";
 import db from "../../prisma/db"
 
 // Criar usuário
 export async function createUser(data: {email: string; name: string}) {
   const user = await db.user.create({data})
-  return user
+  //return user
+  redirect('/')
 }
 
 // Listar usuários
