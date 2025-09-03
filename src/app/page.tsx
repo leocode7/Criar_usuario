@@ -11,7 +11,6 @@ export default async function Home() {
     const name = formData.get('name') as string
     const email = formData.get('email') as string
     await createUser({email, name})
-    redirect('/')
   }
   return (
     <div>
