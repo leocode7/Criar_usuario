@@ -1,7 +1,6 @@
-import { redirect } from "next/navigation";
 import { createUser, getUsers } from "./actions";
 
-
+export const dynamic = 'force-dynamic'
 
 export default async function Home() {
   const users = await getUsers()
